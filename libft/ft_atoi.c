@@ -1,24 +1,36 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/11 19:30:10 by pmessett          #+#    #+#             */
+/*   Updated: 2023/04/11 20:31:00 by pmessett         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *nptr)
 {
 	int i = 0;
 	int sign = 1;
-	unsigned long int result;
+	int result = 0;
 
-	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
+	while (nptr[i] == 32 || (nptr[i] >= 9 && nptr[i] <= 13))
 		i++;
-	if (str[i] == '+')
+	if (nptr[i] == '+')
 		i++;
-	else if (str[i] == '-')
+	else if (nptr[i] == '-')
 	{
 		sign = -1;
 		i++;
 	}
-	while (ft_isdigit(str[i]))
+	while (ft_isdigit(nptr[i]))
 	{
 		result *= 10;
-		result += str[i] - 48;
+		result += nptr[i] - 48;
 		i++;
 	}
 

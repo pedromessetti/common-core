@@ -6,15 +6,15 @@
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 20:51:48 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/11 20:52:08 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/04/12 11:49:00 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t strlcpy(char *dst, const char *src, size_t size)
+size_t	strlcpy(char *dst, const char *src, size_t size)
 {
-    unsigned int	i;
+	unsigned int	i;
 	unsigned int	src_len;
 
 	i = 0;

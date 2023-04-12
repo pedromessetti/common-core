@@ -6,13 +6,13 @@
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 20:33:13 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/11 20:33:14 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/04/12 11:51:05 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
 		c -= 32;

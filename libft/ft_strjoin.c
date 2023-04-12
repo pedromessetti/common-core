@@ -1,82 +1,43 @@
-static char	*ft_strcpy(char *dest, char *src)
-{
-	int	index;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/12 08:21:56 by pmessett          #+#    #+#             */
+/*   Updated: 2023/04/12 11:47:45 by pmessett         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-	index = 0;
-	while (src[index])
-	{
-		dest[index] = src[index];
-		index++;
-	}
-	dest[index] = '\0';
-	return (dest);
+#include "libft.h"
+
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	char	*new_s;
+	size_t	i;
+	size_t	j;
+
+	new_s = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!new_s)
+		return (NULL);
+	i = -1;
+	while (s1[++i])
+		new_s[i] = s1[i];
+	j = -1;
+	while (s2[++j])
+		new_s[i++] = s2[j];
+	new_s[i] = '\0';
+	return (new_s);
 }
 
-static size_t	ft_total_len(int size, char **strs, int sep_len)
-{
-	int	total_len;
-	int	i;
-
-	total_len = 0;
-	i = 0;
-	while (i < size)
-	{
-		total_len += ft_strlen(strs[i]);
-		total_len += sep_len;
-		i++;
-	}
-	total_len -= sep_len;
-	return (total_len);
-}
-
-char	*ft_strjoin(int size, char **strs, char *sep)
-{
-	char	*str;
-	int		i;
-	int		total_len;
-
-	total_len = ft_total_len(size, strs, ft_strlen(sep));
-	if (size == 0)
-		return ((char *)malloc(1));
-	str = (char *)malloc(total_len + 1);
-	if (!str)
-		return (0);
-	i = 0;
-	while (i < size)
-	{
-		ft_strcpy(str, strs[i]);
-		str += ft_strlen(strs[i]);
-		if (i < size - 1)
-		{
-			ft_strcpy(str, sep);
-			str += ft_strlen(sep);
-		}
-		i++;
-	}
-	str[i] = '\0';
-	return (str -= total_len);
-}
-
-// int	main(void)
+// int main(void)
 // {
-// 	int offset;
-// 	char **strs;
-// 	char *res_str;
+// 	char const *s1 = "Hello ";
+// 	char const *s2 = "World!";
 
-// 	strs = malloc(3 * sizeof(char *));
-// 	if (strs == NULL)
-// 		return (1);
-// 	offset = 0;
-// 	while (offset < 3)
-// 	{
-// 		strs[offset] = "pedrin";
-// 		offset++;
-// 	}
-// 	res_str = ft_strjoin(3, strs, ", ");
-// 	if (res_str == NULL)
-// 		return (1);
-// 	printf("res: %s\n", res_str);
-// 	free(strs);
-// 	free(res_str);
+// 	printf("s1: %s\n", s1);
+// 	printf("s2: %s\n", s2);
+// 	printf("new_s: %s\n", ft_strjoin(s1, s2));
 // 	return (0);
 // }

@@ -6,15 +6,15 @@
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 20:53:01 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/11 20:55:28 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/04/12 11:49:04 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t  strlcat(char *dst, const char *src, size_t size)
+size_t	strlcat(char *dst, const char *src, size_t size)
 {
-    unsigned int	i_src;
+	unsigned int	i_src;
 	unsigned int	i_dst;
 	unsigned int	dst_len;
 	unsigned int	src_len;

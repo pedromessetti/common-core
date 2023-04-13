@@ -1,32 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/11 20:53:01 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/12 17:19:50 by pmessett         ###   ########.fr       */
+/*   Created: 2023/04/12 16:48:31 by pmessett          #+#    #+#             */
+/*   Updated: 2023/04/12 17:15:55 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned int	i_src;
-	unsigned int	i_dst;
-	unsigned int	dst_len;
-	unsigned int	src_len;
-
-	dst_len = ft_strlen(dst);
-	src_len = ft_strlen(src);
-	i_src = 0;
-	i_dst = dst_len;
-	if (size == 0 || size <= dst_len)
-		return (src_len + size);
-	while (src[i_src] && (i_src < (size - dst_len - 1)))
-		dst[i_dst++] = src[i_src++];
-	dst[i_dst] = '\0';
-	return (src_len + dst_len);
+	ft_memset(s, '\0', n);
 }

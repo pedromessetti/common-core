@@ -6,24 +6,11 @@
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 10:21:26 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/12 13:30:43 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/04/12 20:26:34 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
 
 char	**ft_split(char const *s, char c)
 {

@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/11 20:53:01 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/12 17:19:50 by pmessett         ###   ########.fr       */
+/*   Created: 2023/04/12 15:37:09 by pmessett          #+#    #+#             */
+/*   Updated: 2023/04/12 19:56:18 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned int	i_src;
-	unsigned int	i_dst;
-	unsigned int	dst_len;
-	unsigned int	src_len;
+	unsigned char	*p;
+	size_t			i;
 
-	dst_len = ft_strlen(dst);
-	src_len = ft_strlen(src);
-	i_src = 0;
-	i_dst = dst_len;
-	if (size == 0 || size <= dst_len)
-		return (src_len + size);
-	while (src[i_src] && (i_src < (size - dst_len - 1)))
-		dst[i_dst++] = src[i_src++];
-	dst[i_dst] = '\0';
-	return (src_len + dst_len);
+	i = 0;
+	p = (unsigned char *)s;
+	while (i < n)
+	{
+		p[i] = c;
+		i++;
+	}
+	return (p);
 }
+
+// int	main(void)
+// {
+// 	char p[12] = "Hello World";
+// 	int c = '-';
+
+// 	printf("before:%s:\n", p);
+// 	ft_memset(p, c, 10);
+// 	printf("after:%s:\n", p);
+// }

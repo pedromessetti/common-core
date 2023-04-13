@@ -1,32 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/11 20:53:01 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/12 17:19:50 by pmessett         ###   ########.fr       */
+/*   Created: 2023/04/12 15:20:56 by pmessett          #+#    #+#             */
+/*   Updated: 2023/04/12 15:34:08 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+char	*ft_strrchr(const char *s, int c)
 {
-	unsigned int	i_src;
-	unsigned int	i_dst;
-	unsigned int	dst_len;
-	unsigned int	src_len;
+	int	i;
 
-	dst_len = ft_strlen(dst);
-	src_len = ft_strlen(src);
-	i_src = 0;
-	i_dst = dst_len;
-	if (size == 0 || size <= dst_len)
-		return (src_len + size);
-	while (src[i_src] && (i_src < (size - dst_len - 1)))
-		dst[i_dst++] = src[i_src++];
-	dst[i_dst] = '\0';
-	return (src_len + dst_len);
+	i = ft_strlen(s);
+	if (c == '\0')
+		return ((char *)s + i);
+	while (i >= 0)
+	{
+		if (s[i] == c)
+			return ((char *)s + i);
+		i--;
+	}
+	return (NULL);
 }
+
+// int	main(void)
+// {
+// 	const char *s = "Hello world porra!";
+// 	int c = 'o';
+
+// 	printf("string:%s:\n", s);
+// 	printf("char:%d:\n", c);
+// 	printf("first occurence:%s:\n", ft_strrchr(s, c));
+// }

@@ -1,32 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/11 20:51:48 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/12 17:19:39 by pmessett         ###   ########.fr       */
+/*   Created: 2023/04/12 14:37:14 by pmessett          #+#    #+#             */
+/*   Updated: 2023/04/12 15:21:57 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+char	*ft_strchr(const char *s, int c)
 {
-	unsigned int	i;
-	unsigned int	src_len;
+	int	i;
 
 	i = 0;
-	src_len = ft_strlen(src);
-	if (size != 0)
+	while (s[i])
 	{
-		while ((i < (size - 1)) && src[i])
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		dst[i] = '\0';
+		if (s[i] == c)
+			return ((char *)s + i);
+		i++;
 	}
-	return (src_len);
+	if (c == '\0')
+		return ((char *)s + i);
+	return (NULL);
 }
+
+// int	main(void)
+// {
+// 	const char *s = "Hello World!";
+// 	int c = 32;
+
+// 	printf("string:%s:\n", s);
+// 	printf("char:%d:\n", c);
+// 	printf("first occurence:%s:\n", ft_strchr(s, c));
+// }

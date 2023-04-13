@@ -6,7 +6,7 @@
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 19:30:24 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/12 11:47:36 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/04/12 20:19:15 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s)
 	int		i;
 
 	i = 0;
-	dst = malloc(ft_strlen(s) + 1);
+	dst = malloc(ft_strlen(s)+1);
 	if (!dst)
 		return (NULL);
 	while (s[i])

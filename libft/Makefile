@@ -6,7 +6,7 @@
 #    By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/12 12:23:08 by pmessett          #+#    #+#              #
-#    Updated: 2023/04/14 11:51:07 by pmessett         ###   ########.fr        #
+#    Updated: 2023/04/14 13:30:28 by pmessett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,8 @@ ft_memchr.c \
 ft_memcmp.c \
 ft_strnstr.c \
 ft_calloc.c \
-ft_itoa.c
+ft_itoa.c \
+ft_strmapi.c
 
 OBJ = $(SRC:.c=.o)
 

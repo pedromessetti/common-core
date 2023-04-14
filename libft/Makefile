@@ -6,7 +6,7 @@
 #    By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/12 12:23:08 by pmessett          #+#    #+#              #
-#    Updated: 2023/04/12 17:13:33 by pmessett         ###   ########.fr        #
+#    Updated: 2023/04/14 11:51:07 by pmessett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CME = ar -rcs
 
 NAME = libft.a
 
-FLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
 SRC = ft_isalpha.c \
 ft_strlcat.c \
@@ -40,7 +40,13 @@ ft_bzero.c \
 ft_strchr.c \
 ft_strrchr.c \
 ft_memcpy.c \
-ft_memset.c 
+ft_memset.c \
+ft_memmove.c \
+ft_memchr.c \
+ft_memcmp.c \
+ft_strnstr.c \
+ft_calloc.c \
+ft_itoa.c
 
 OBJ = $(SRC:.c=.o)
 

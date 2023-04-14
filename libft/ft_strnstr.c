@@ -1,41 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/12 14:37:14 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/14 09:54:10 by pmessett         ###   ########.fr       */
+/*   Created: 2023/04/13 12:21:12 by pmessett          #+#    #+#             */
+/*   Updated: 2023/04/13 13:59:29 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	unsigned char	a;
-	int				i;
+	size_t	i;
+	size_t	j;
 
-	a = c;
 	i = 0;
-	while (s[i])
+	while (!*little)
+		return ((char *)big);
+	while (big[i] && i < len)
 	{
-		if (s[i] == a)
-			return ((char *)s + i);
+		j = 0;
+		while (big[i + j] == little[j] && (i + j) < len)
+		{
+			if (little[j + 1] == '\0')
+				return ((char *)big + i);
+			j++;
+		}
 		i++;
 	}
-	if (a == '\0')
-		return ((char *)s + i);
 	return (NULL);
 }
-
+// #include <stddef.h>
+// #include <stdio.h>
+// #include <stdlib.h>
 // int	main(void)
 // {
-// 	const char *s = "Hello World!";
-// 	int c = ' ';
+// 	char *p = ft_strnstr("lorem ipsum dolor sit amet", "dolor", 15);
 
-// 	printf("string:%s:\n", s);
-// 	printf("char:%d:\n", c);
-// 	printf("first occurence:%s:\n", ft_strchr(s, c));
+// 	if (p == NULL)
+// 		printf("OK");
+// 	else
+// 		printf("KO");
 // }

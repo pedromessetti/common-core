@@ -6,7 +6,7 @@
 #    By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/12 12:23:08 by pmessett          #+#    #+#              #
-#    Updated: 2023/04/14 13:30:28 by pmessett         ###   ########.fr        #
+#    Updated: 2023/04/14 16:11:12 by pmessett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,12 @@ ft_memcmp.c \
 ft_strnstr.c \
 ft_calloc.c \
 ft_itoa.c \
-ft_strmapi.c
+ft_strmapi.c \
+ft_striteri.c \
+ft_putchar_fd.c \
+ft_putstr_fd.c \
+ft_putnbr_fd.c \
+ft_putendl_fd.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -60,7 +65,12 @@ clean:
 	rm -f *.o
 
 fclean:	clean
-						rm -f $(NAME)
+	rm -f $(NAME)
 
-re:
-	fclean all
+re:	fclean all
+
+compile:	re
+		$(CC) main.c -L. -lft
+
+run:	compile
+		./a.out

@@ -6,7 +6,7 @@
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 09:39:57 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/13 16:19:46 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/04/14 13:47:46 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 // int	main(void)
 // {
-// 	char const *s1 = "---Hello-World---";
-// 	char const *set = "-";
+// 	char const *s1 = "abcHello-Worldabc";
+// 	char const *set = "abc";
 
 // 	printf("string:%s:\n", s1);
 // 	printf("set of char:%s:\n", set);

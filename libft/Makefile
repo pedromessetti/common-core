@@ -6,7 +6,7 @@
 #    By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/12 12:23:08 by pmessett          #+#    #+#              #
-#    Updated: 2023/04/14 16:11:12 by pmessett         ###   ########.fr        #
+#    Updated: 2023/04/16 09:29:27 by pmessett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,10 +54,22 @@ ft_putstr_fd.c \
 ft_putnbr_fd.c \
 ft_putendl_fd.c
 
+SRC_BONUS = ft_lstnew.c \
+ft_lstadd_front.c \
+ft_lstadd_back.c \
+ft_lstsize.c \
+ft_lstlast.c \
+ft_lstdelone.c \
+ft_lstclear.c \
+ft_lstiter.c \
+ft_lstmap.c
+
 OBJ = $(SRC:.c=.o)
 
-$(NAME):	$(OBJ)
-					$(CME) $(NAME) $(OBJ)
+OBJ_BONUS = $(SRC_BONUS:.c=.o)
+
+$(NAME):	$(OBJ) $(OBJ_BONUS)
+	$(CME) $(NAME) $(OBJ) $(OBJ_BONUS)
 
 all:	$(NAME)
 
@@ -69,8 +81,11 @@ fclean:	clean
 
 re:	fclean all
 
+bonus:	$(SRC_BONUS)
+	$(CME) $(NAME) $(OBJ_BONUS)
+
 compile:	re
-		$(CC) main.c -L. -lft
+	$(CC) main.c -L. -lft
 
 run:	compile
-		./a.out
+	./a.out

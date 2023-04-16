@@ -6,7 +6,7 @@
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 10:17:06 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/13 11:32:34 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/04/16 07:11:50 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 
-// #include <stddef.h>
-// #include <stdio.h>
-// #include <stdlib.h>
 // int	main(void)
 // {
 // 	const void *s = "Hello World!";

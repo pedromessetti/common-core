@@ -6,7 +6,7 @@
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 20:33:25 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/14 16:11:47 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/04/16 07:13:43 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct s_list
+{
+void *content;
+struct s_list *next;
+} t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

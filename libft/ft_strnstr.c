@@ -6,7 +6,7 @@
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 12:21:12 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/13 13:59:29 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/04/16 07:12:25 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-// #include <stddef.h>
-// #include <stdio.h>
-// #include <stdlib.h>
+
 // int	main(void)
 // {
 // 	char *p = ft_strnstr("lorem ipsum dolor sit amet", "dolor", 15);

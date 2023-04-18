@@ -6,19 +6,19 @@
 #    By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/12 12:23:08 by pmessett          #+#    #+#              #
-#    Updated: 2023/04/16 09:29:27 by pmessett         ###   ########.fr        #
+#    Updated: 2023/04/16 11:40:43 by pmessett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+NAME = libft.a
 
 CC = cc
 
 CME = ar -rcs
 
-NAME = libft.a
-
 CFLAGS = -Wall -Wextra -Werror
 
-SRC = ft_isalpha.c \
+SRCS = ft_isalpha.c \
 ft_strlcat.c \
 ft_atoi.c \
 ft_isalnum.c \
@@ -54,7 +54,7 @@ ft_putstr_fd.c \
 ft_putnbr_fd.c \
 ft_putendl_fd.c
 
-SRC_BONUS = ft_lstnew.c \
+SRCS_BONUS = ft_lstnew.c \
 ft_lstadd_front.c \
 ft_lstadd_back.c \
 ft_lstsize.c \
@@ -64,12 +64,12 @@ ft_lstclear.c \
 ft_lstiter.c \
 ft_lstmap.c
 
-OBJ = $(SRC:.c=.o)
+OBJS = $(SRCS:.c=.o)
 
-OBJ_BONUS = $(SRC_BONUS:.c=.o)
+OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
-$(NAME):	$(OBJ) $(OBJ_BONUS)
-	$(CME) $(NAME) $(OBJ) $(OBJ_BONUS)
+$(NAME):	$(OBJS) $(OBJS_BONUS)
+	$(CME) $(NAME) $(OBJS) $(OBJS_BONUS)
 
 all:	$(NAME)
 
@@ -81,8 +81,8 @@ fclean:	clean
 
 re:	fclean all
 
-bonus:	$(SRC_BONUS)
-	$(CME) $(NAME) $(OBJ_BONUS)
+bonus:	$(SRCS_BONUS)
+	$(CME) $(NAME) $(OBJS_BONUS)
 
 compile:	re
 	$(CC) main.c -L. -lft

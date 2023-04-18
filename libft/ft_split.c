@@ -6,7 +6,7 @@
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 10:21:26 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/14 11:48:19 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/04/16 12:13:57 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ char	**ft_split(char const *s, char c)
 
 // int	main(void)
 // {
-// 	char const *s = "lorem ipsum dolor sit amet, consectetur";
+// 	char const *s =  "    lorem ipsum dolor sit amet, consectetur";
 // 	char c = ' ';
 // 	char **result = ft_split(s, c);
 

@@ -6,25 +6,49 @@
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 11:28:37 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/16 11:29:14 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/04/18 10:00:55 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-int ft_printf(const char *, ...)
+static void	ft_checkflag(const char c, va_list args, unsigned int *size)
 {
-/*
-make functions for all the following conversions
+	if (c == 'c')
+		ft_putchar(va_arg(args, int), size);
+	else if (c == 's')
+		ft_putstr(va_arg(args, char *), size);
+	else if (c == '%')
+		ft_putchar('%', size);
+	else if (c == 'd' || c == 'i')
+		ft_putnbr(va_arg(args, int), size);
+	else if (c == 'u')
+		ft_putunsnbr(va_arg(args, int), size);
+	else if (c == 'x')
+		ft_putnbr_base(va_arg(args, unsigned int), HEX_LOW, size);
+	else if (c == 'X')
+		ft_putnbr_base(va_arg(args, unsigned int), HEX_UP, size);
+	else if (c == 'p')
+		ft_putaddr(va_arg(args, unsigned long int), size);
+}
 
-%c Prints a single character. (Join with %% function)
-%s Prints a string (as defined by the common C convention).
-%p The void * pointer argument has to be printed in hexadecimal format.
-%d Prints a decimal number.(Join with %i and %u function)
-%i Prints an integer in base 10.
-%u Prints an unsigned decimal (base 10) number.
-%x Prints a number in hexadecimal (base 16) lowercase format. (#define 0123456789abcdef in .h and join with %X)
-%X Prints a number in hexadecimal (base 16) uppercase format.
-%% Prints a percent sign.
-*/
+int	ft_printf(const char *s, ...)
+{
+	va_list			args;
+	unsigned int	i;
+	unsigned int	size;
+
+	size = 0;
+	i = 0;
+	va_start(args, s);
+	while (s[i])
+	{
+		if (s[i] == '%')
+			ft_checkflag(s[++i], args, &size);
+		else
+			ft_putchar(s[i], &size);
+		i++;
+	}
+	va_end(args);
+	return (size);
 }

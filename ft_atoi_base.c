@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pedro <pedro@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:54:28 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/17 11:45:00 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/05/25 08:47:41 by pedro            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,8 @@ int	ft_negative(char *str, int *sign, int i)
 
 int	ft_atoi_base(char *str, char *base)
 {
-	int	i;
-	int	res;
+	size_t	i;
+	size_t	res;
 	int	result;
 	int	sign;
 

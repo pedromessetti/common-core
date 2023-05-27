@@ -1,15 +1,9 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/04/12 12:23:08 by pmessett          #+#    #+#              #
-#    Updated: 2023/04/16 11:40:43 by pmessett         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
+.SILENT:
+# Color variables
+RED = \033[1;31m
+GREEN = \033[1;32m
+WHITE = \033[1;37m
+RESET = \033[0m
 NAME = libft.a
 
 CC = cc
@@ -21,6 +15,7 @@ CFLAGS = -Wall -Wextra -Werror
 SRCS = ft_isalpha.c \
 ft_strlcat.c \
 ft_atoi.c \
+ft_atoi_base.c \
 ft_isalnum.c \
 ft_isascii.c \
 ft_isdigit.c \
@@ -70,10 +65,11 @@ OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
 $(NAME):	$(OBJS) $(OBJS_BONUS)
 	$(CME) $(NAME) $(OBJS) $(OBJS_BONUS)
+	echo "$(GREEN)[OK]$(NAME)$(RESET)"
 
 all:	$(NAME)
 
-clean:
+clean: $(NAME)
 	rm -f *.o
 
 fclean:	clean

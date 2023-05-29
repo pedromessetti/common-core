@@ -6,7 +6,7 @@
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 20:33:25 by pmessett          #+#    #+#             */
-/*   Updated: 2023/05/29 10:48:14 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/05/29 13:33:21 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ typedef struct s_list
 /* --- Utils functions --- */
 
 int					ft_isalpha(int c);
-int					ft_isdigit(int c);
+int					ft_isnum(int c);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
@@ -55,8 +55,9 @@ char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				**ft_split(char const *s, char c);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
+int					ft_str_is_space(char *s);
 
-/* --- Memmory functions --- */
+/* --- Memory functions --- */
 
 void				ft_bzero(void *s, size_t n);
 void				*ft_memset(void *s, int c, size_t n);

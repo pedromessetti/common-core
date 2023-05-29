@@ -12,14 +12,17 @@
 
 #include "libft.h"
 
+/*Calculates the length of the str pointed by s,
+excludingthe terminating null byte ('\0').
+ 
+Returns his lenght.*/
 size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 
-	i = 0;
 	if (!s)
 		return (0);
-	while (s[i])
-		i++;
+	i = -1;
+	while (s[++i]);
 	return (i);
 }

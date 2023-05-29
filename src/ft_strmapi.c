@@ -6,12 +6,19 @@
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 13:33:11 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/14 14:10:57 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/05/29 13:57:06 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*Applies the function ’f’ to each char of the
+str ’s’, and passing its index as first argument
+to create a new str with	malloc(void) resulting
+from successive applications of ’f’.
+
+Returns the new str created from the successive applications
+of ’f’. NULL if the allocation fails.*/
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;

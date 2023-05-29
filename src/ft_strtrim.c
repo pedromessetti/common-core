@@ -6,12 +6,16 @@
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 09:39:57 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/14 13:47:46 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/05/29 13:49:21 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*Allocates memory with malloc() and returns a copy of
+s1 with the characters specified in ’set’ removed
+from the beginning and the end of the string,
+or NULL if the allocation fails.*/
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*strim;

@@ -6,12 +6,13 @@
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 19:30:10 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/12 11:49:40 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/05/29 11:44:26 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*Convert a string to an integer.*/
 int	ft_atoi(const char *nptr)
 {
 	int	i;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pedro <pedro@student.42.fr>                +#+  +:+       +#+        */
+/*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 10:21:26 by pmessett          #+#    #+#             */
-/*   Updated: 2023/05/26 23:51:49 by pedro            ###   ########.fr       */
+/*   Updated: 2023/05/29 13:50:03 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,10 @@ static char	*ft_string(char const *s, char *new_s, char c)
 	return (new_s);
 }
 
+/*Allocates memory with malloc() and returns an array
+of strings obtained by splitting str s using the
+char c as a delimiter, or NULL if the allocation fails.
+The array ends with a NULL pointer.*/
 char	**ft_split(char const *s, char c)
 {
 	char	**new_s;
@@ -79,9 +83,9 @@ char	**ft_split(char const *s, char c)
 
 // int	main(void)
 // {
-// 	char const *s =  "    lorem ipsum dolor sit amet, consectetur";
+// 	char const *s =  "            ";
 // 	char c = ' ';
-// 	char **result = ft_split(s, c);
+// 	char **result = ft_split(s, ' ');
 
 // 	printf("string:%s:\n", s);
 // 	printf("char:%c:\n", c);

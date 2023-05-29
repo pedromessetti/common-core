@@ -6,12 +6,14 @@
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 15:54:47 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/16 12:21:31 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/05/29 13:58:40 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*Outputs the string ’s’ to the given file
+descriptor.*/
 void	ft_putstr_fd(char *s, int fd)
 {
 	unsigned int	i;

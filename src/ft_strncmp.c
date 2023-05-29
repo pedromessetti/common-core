@@ -6,12 +6,17 @@
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 20:31:37 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/13 11:59:50 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/05/29 13:19:55 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*Compares compares only the first n bytes of s1 and s2.
+
+Returns an integer less than, equal to, or greater than zero
+if s1 is found, respectively, to be less than, to match,
+or be greater than s2.*/
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;

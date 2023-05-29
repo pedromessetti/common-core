@@ -6,12 +6,13 @@
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 14:37:14 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/14 09:54:10 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/05/29 13:07:55 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*Returns a pointer to the first occurrence of the char c in the str.*/
 char	*ft_strchr(const char *s, int c)
 {
 	unsigned char	a;

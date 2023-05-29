@@ -6,7 +6,7 @@
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 23:56:48 by pmessett          #+#    #+#             */
-/*   Updated: 2023/05/29 10:48:01 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/05/29 13:59:51 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ static void	ft_converter(long int n, int baselen, char *base, int fd)
 	}
 }
 
+/*Outputs the integer ’n’ converted to any base passed as argument to the given file
+descriptor.*/
 void	ft_putnbr_base_fd(int nbr, char *base, int fd)
 {
 	long int	n;

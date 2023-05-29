@@ -6,12 +6,18 @@
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 12:21:12 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/16 07:12:25 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/05/29 13:25:53 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*Locates the first occurrence of the null-terminated
+str little in the str big, where not more than len char are searched.
+
+Returns a pointer to the first char of the first occurrence of little.
+If little occurs nowhere in big, NUL is returned.
+If little is empty, big is returned.*/
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;

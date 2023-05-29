@@ -6,7 +6,7 @@
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 11:49:42 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/14 13:29:25 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/05/29 13:54:07 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ static int	ft_intlen(long int li)
 	return (i);
 }
 
+/*Allocates memory with malloc() and returns a str
+representing the integer received as an argument.*/
 char	*ft_itoa(int n)
 {
 	long int	li;

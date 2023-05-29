@@ -12,8 +12,8 @@
 
 #include "libft.h"
 
-/*Calculates the length of the str pointed by s,
-excludingthe terminating null byte ('\0').
+/*Calculates the length of the str pointed to by
+s, excluding the terminating null byte ('\0').
  
 Returns his lenght.*/
 size_t	ft_strlen(const char *s)

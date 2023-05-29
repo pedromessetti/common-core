@@ -6,14 +6,14 @@
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 20:51:48 by pmessett          #+#    #+#             */
-/*   Updated: 2023/05/29 13:15:30 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/05/29 14:54:58 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*Copies up to size - 1 characters from the NUL-terminated src to dst,
-NUL-terminating the result.
+/*Copies up to size - 1 characters from the NULL-terminated src to dst,
+NULL-terminating the result.
 
 Returns the length of src.*/
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pedro <pedro@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 10:21:26 by pmessett          #+#    #+#             */
-/*   Updated: 2023/04/16 12:13:57 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/05/26 23:51:49 by pedro            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	int		j;
 
-	new_s = (char **)malloc((ft_mem(s, c) + 1) * sizeof(char *));
+	new_s = (char **)malloc((ft_mem(s, c) + 1) * sizeof(char **));
 	if (!new_s || !s)
 		return (NULL);
 	i = 0;

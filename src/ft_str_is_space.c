@@ -6,7 +6,7 @@
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 13:31:34 by pmessett          #+#    #+#             */
-/*   Updated: 2023/05/29 13:33:12 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/05/30 14:06:49 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ Return 0 if the str has other chars
 */
 int	ft_str_is_space(char *s)
 {
-	int i = -1;
+	int	i;
+
+	i = -1;
 	while (s[++i])
 	{
 		if (s[i] != ' ' && s[i] != '\t')

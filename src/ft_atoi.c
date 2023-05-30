@@ -6,7 +6,7 @@
 /*   By: pmessett <pmessett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 19:30:10 by pmessett          #+#    #+#             */
-/*   Updated: 2023/05/29 11:44:26 by pmessett         ###   ########.fr       */
+/*   Updated: 2023/05/30 13:06:55 by pmessett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_atoi(const char *nptr)
 		sign = -1;
 		i++;
 	}
-	while (ft_isdigit(nptr[i]))
+	while (ft_isnum(nptr[i]))
 	{
 		result *= 10;
 		result += nptr[i] - 48;
